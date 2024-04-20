@@ -94,7 +94,7 @@
 											</td>
 											<td>Paypal</td>
 											<td>8 Feb 2019</td>
-											<td>$500</td>
+											<td><span>&#8377;</span>500</td>
 										</tr>
 										<tr>
 											<td><a href="invoice-view.php">#INV-0002</a></td>
@@ -103,7 +103,7 @@
 											</td>
 											<td>Paypal</td>
 											<td>8 Feb 2019</td>
-											<td>$500</td>
+											<td><span>&#8377;</span>500</td>
 										</tr>
 										<tr>
 											<td><a href="invoice-view.php">#INV-0003</a></td>
@@ -112,7 +112,7 @@
 											</td>
 											<td>Paypal</td>
 											<td>8 Feb 2019</td>
-											<td>$500</td>
+											<td><span>&#8377;</span>500</td>
 										</tr>
 									</tbody>
 								</table>

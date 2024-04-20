@@ -137,7 +137,7 @@
 											<td>Global Technologies</td>
 											<td>11 Mar 2019</td>
 											<td>17 Mar 2019</td>
-											<td>$2099</td>
+											<td><span>&#8377;</span>2099</td>
 											<td><span class="badge bg-inverse-success">Paid</span></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -157,7 +157,7 @@
 											<td>Delta Infotech</td>
 											<td>11 Mar 2019</td>
 											<td>17 Mar 2019</td>
-											<td>$2099</td>
+											<td><span>&#8377;</span>2099</td>
 											<td><span class="badge bg-inverse-info">Sent</span></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -177,7 +177,7 @@
 											<td>Cream Inc</td>
 											<td>11 Mar 2019</td>
 											<td>17 Mar 2019</td>
-											<td>$2099</td>
+											<td><span>&#8377;</span>2099</td>
 											<td><span class="badge bg-inverse-warning">Partially Paid</span></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">

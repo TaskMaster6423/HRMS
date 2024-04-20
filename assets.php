@@ -172,7 +172,7 @@
 											<td><?php echo htmlentities($row->assetId); ?></td>
 											<td><?php echo htmlentities($row->PurchaseDate); ?></td>
 											<td><?php echo htmlentities($row->Warranty); ?></td>
-											<td><?php echo "$".htmlentities($row->Price); ?></td>
+											<td><?php echo "<span>&#8377;</span>".htmlentities($row->Price); ?></td>
 											<td class="text-center">
 												<div class="dropdown action-label">
 													<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">

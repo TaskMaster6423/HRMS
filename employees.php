@@ -125,37 +125,41 @@
 					<!-- user profiles list starts her -->
 
 					<div class="row staff-grid-row">
-						<?php
-										$sql = "SELECT * FROM employees";
-										$query = $dbh->prepare($sql);
-										$query->execute();
-										$results=$query->fetchAll(PDO::FETCH_OBJ);
-										$cnt=1;
-										if($query->rowCount() > 0)
-										{
-										foreach($results as $row)
-										{	
-									?>
-						<div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-							<div class="profile-widget">
-								<div class="profile-img">
-									<a href="profile.php" class="avatar"><img src="employees/<?php echo htmlentities($row->Picture); ?>" alt="picture"></a>
-								</div>
-								<div class="dropdown profile-action">
-									<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-									<div class="dropdown-menu dropdown-menu-right">
-										<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_employee"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-										<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-									</div>
-								</div>
-								<h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="profile.php"><?php echo htmlentities($row->FirstName)." ".htmlentities($row->LastName); ?></a></h4>
-								<div class="small text-muted"><?php echo htmlentities($row->Designation); ?></div>
-							</div>
-						</div>	
-						<?php $cnt +=1; 
-    }
-    } ?>					
-					</div>
+    <?php
+        $sql = "SELECT * FROM employees";
+        $query = $dbh->prepare($sql);
+        $query->execute();
+        $results=$query->fetchAll(PDO::FETCH_OBJ);
+        $cnt=1;
+        if($query->rowCount() > 0) {
+            foreach($results as $row) {	
+    ?>
+    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
+        <div class="profile-widget">
+            <div class="profile-img">
+                <!-- Modify the anchor tag to include the name of the profile -->
+                <a href="profile.php?name=<?php echo urlencode(htmlentities($row->firstname)." ".htmlentities($row->lastname)); ?>" class="avatar">
+                    <img src="employees/<?php echo htmlentities($row->picture); ?>" alt="picture">
+                </a>
+            </div>
+            <div class="dropdown profile-action">
+                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_employee"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                </div>
+            </div>
+            <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="profile.php?name=<?php echo urlencode(htmlentities($row->firstname)." ".htmlentities($row->lastname)); ?>"><?php echo htmlentities($row->firstname)." ".htmlentities($row->lastname); ?></a></h4>
+            <div class="small text-muted"><?php echo htmlentities($row->designation); ?></div>
+        </div>
+    </div>	
+    <?php 
+        $cnt +=1; 
+        }
+    } 
+    ?>					
+</div>
+
 					
     </div>
     

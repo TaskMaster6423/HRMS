@@ -171,7 +171,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$59698</td>
+											<td><span>&#8377;</span>59698</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -204,7 +204,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$72000</td>
+											<td><span>&#8377;</span>72000</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -237,7 +237,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$48200</td>
+											<td><span>&#8377;</span>48200</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -270,7 +270,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$59698</td>
+											<td><span>&#8377;</span>59698</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -303,7 +303,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$43000</td>
+											<td><span>&#8377;</span>43000</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -336,7 +336,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$45000</td>
+											<td><span>&#8377;</span>45000</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -369,7 +369,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$38400</td>
+											<td><span>&#8377;</span>38400</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -402,7 +402,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$75500</td>
+											<td><span>&#8377;</span>75500</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -435,7 +435,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$73550</td>
+											<td><span>&#8377;</span>73550</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -468,7 +468,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$55000</td>
+											<td><span>&#8377;</span>55000</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
@@ -501,7 +501,7 @@
 													</div>
 												</div>
 											</td>
-											<td>$92400</td>
+											<td><span>&#8377;</span>92400</td>
 											<td><a class="btn btn-sm btn-primary" href="salary-view.php">Generate Slip</a></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">

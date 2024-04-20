@@ -116,19 +116,19 @@
 												<table class="table table-bordered">
 													<tbody>
 														<tr>
-															<td><strong>Basic Salary</strong> <span class="float-right">$6500</span></td>
+															<td><strong>Basic Salary</strong> <span class="float-right"><span>&#8377;</span>6500</span></td>
 														</tr>
 														<tr>
-															<td><strong>House Rent Allowance (H.R.A.)</strong> <span class="float-right">$55</span></td>
+															<td><strong>House Rent Allowance (H.R.A.)</strong> <span class="float-right"><span>&#8377;</span>55</span></td>
 														</tr>
 														<tr>
-															<td><strong>Conveyance</strong> <span class="float-right">$55</span></td>
+															<td><strong>Conveyance</strong> <span class="float-right"><span>&#8377;</span>55</span></td>
 														</tr>
 														<tr>
-															<td><strong>Other Allowance</strong> <span class="float-right">$55</span></td>
+															<td><strong>Other Allowance</strong> <span class="float-right"><span>&#8377;</span>55</span></td>
 														</tr>
 														<tr>
-															<td><strong>Total Earnings</strong> <span class="float-right"><strong>$55</strong></span></td>
+															<td><strong>Total Earnings</strong> <span class="float-right"><strong><span>&#8377;</span>55</strong></span></td>
 														</tr>
 													</tbody>
 												</table>
@@ -140,26 +140,26 @@
 												<table class="table table-bordered">
 													<tbody>
 														<tr>
-															<td><strong>Tax Deducted at Source (T.D.S.)</strong> <span class="float-right">$0</span></td>
+															<td><strong>Tax Deducted at Source (T.D.S.)</strong> <span class="float-right"><span>&#8377;</span>0</span></td>
 														</tr>
 														<tr>
-															<td><strong>Provident Fund</strong> <span class="float-right">$0</span></td>
+															<td><strong>Provident Fund</strong> <span class="float-right"><span>&#8377;</span>0</span></td>
 														</tr>
 														<tr>
-															<td><strong>ESI</strong> <span class="float-right">$0</span></td>
+															<td><strong>ESI</strong> <span class="float-right"><span>&#8377;</span>0</span></td>
 														</tr>
 														<tr>
-															<td><strong>Loan</strong> <span class="float-right">$300</span></td>
+															<td><strong>Loan</strong> <span class="float-right"><span>&#8377;</span>300</span></td>
 														</tr>
 														<tr>
-															<td><strong>Total Deductions</strong> <span class="float-right"><strong>$59698</strong></span></td>
+															<td><strong>Total Deductions</strong> <span class="float-right"><strong><span>&#8377;</span>59698</strong></span></td>
 														</tr>
 													</tbody>
 												</table>
 											</div>
 										</div>
 										<div class="col-sm-12">
-											<p><strong>Net Salary: $59698</strong> (Fifty nine thousand six hundred and ninety eight only.)</p>
+											<p><strong>Net Salary: <span>&#8377;</span>59698</strong> (Fifty nine thousand six hundred and ninety eight only.)</p>
 										</div>
 									</div>
 								</div>

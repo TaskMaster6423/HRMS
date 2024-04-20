@@ -117,7 +117,7 @@
 										<div class="col-sm-6 col-lg-5 col-xl-4 m-b-20">
 											<span class="text-muted">Payment Details:</span>
 											<ul class="list-unstyled invoice-payment-details">
-												<li><h5>Total Due: <span class="text-right">$8,750</span></h5></li>
+												<li><h5>Total Due: <span class="text-right"><span>&#8377;</span>8,750</span></h5></li>
 												<li>Bank name: <span>Profit Bank Europe</span></li>
 												<li>Country: <span>United Kingdom</span></li>
 												<li>City: <span>London E1 8BF</span></li>
@@ -144,41 +144,41 @@
 													<td>1</td>
 													<td>Android Application</td>
 													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-													<td>$1000</td>
+													<td><span>&#8377;</span>1000</td>
 													<td>2</td>
-													<td class="text-right">$2000</td>
+													<td class="text-right"><span>&#8377;</span>2000</td>
 												</tr>
 												<tr>
 													<td>2</td>
 													<td>Ios Application</td>
 													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-													<td>$1750</td>
+													<td><span>&#8377;</span>1750</td>
 													<td>1</td>
-													<td class="text-right">$1750</td>
+													<td class="text-right"><span>&#8377;</span>1750</td>
 												</tr>
 												<tr>
 													<td>3</td>
 													<td>Codeigniter Project</td>
 													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-													<td>$90</td>
+													<td><span>&#8377;</span>90</td>
 													<td>3</td>
-													<td class="text-right">$270</td>
+													<td class="text-right"><span>&#8377;</span>270</td>
 												</tr>
 												<tr>
 													<td>4</td>
 													<td>Phonegap Project</td>
 													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-													<td>$1200</td>
+													<td><span>&#8377;</span>1200</td>
 													<td>2</td>
-													<td class="text-right">$2400</td>
+													<td class="text-right"><span>&#8377;</span>2400</td>
 												</tr>
 												<tr>
 													<td>5</td>
 													<td>Website Optimization</td>
 													<td class="d-none d-sm-table-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-													<td>$200</td>
+													<td><span>&#8377;</span>200</td>
 													<td>2</td>
-													<td class="text-right">$400</td>
+													<td class="text-right"><span>&#8377;</span>400</td>
 												</tr>
 											</tbody>
 										</table>
@@ -194,15 +194,15 @@
 															<tbody>
 																<tr>
 																	<th>Subtotal:</th>
-																	<td class="text-right">$7,000</td>
+																	<td class="text-right"><span>&#8377;</span>7,000</td>
 																</tr>
 																<tr>
 																	<th>Tax: <span class="text-regular">(25%)</span></th>
-																	<td class="text-right">$1,750</td>
+																	<td class="text-right"><span>&#8377;</span>1,750</td>
 																</tr>
 																<tr>
 																	<th>Total:</th>
-																	<td class="text-right text-primary"><h5>$8,750</h5></td>
+																	<td class="text-right text-primary"><h5><span>&#8377;</span>8,750</h5></td>
 																</tr>
 															</tbody>
 														</table>

@@ -161,7 +161,7 @@
 													<a href="profile.php">Loren Gatlin</a>
 												</h2>
 											</td>
-											<td>$1215</td>
+											<td><span>&#8377;</span>1215</td>
 											<td>Cash</td>
 											<td class="text-center">
 												<div class="dropdown action-label">
@@ -196,7 +196,7 @@
 													<a href="profile.php">Tarah Shropshire</a>
 												</h2>
 											</td>
-											<td>$1215</td>
+											<td><span>&#8377;</span>1215</td>
 											<td>Cheque</td>
 											<td class="text-center">
 												<div class="dropdown action-label">

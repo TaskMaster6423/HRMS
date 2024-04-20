@@ -92,7 +92,7 @@
 					<!-- /Page Header -->
 					
 					<!-- Overtime Statistics -->
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
 							<div class="stats-info">
 								<h6>Overtime Employee</h6>
@@ -117,7 +117,7 @@
 								<h4>5</h4>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- /Overtime Statistics -->
 					
 					<div class="row">
@@ -130,7 +130,7 @@
 											<th>Employee Name</th>
 											<th>OT Date</th>
 											<th class="text-center">OT Hours</th>
-											<th>OT Type</th>
+											<!-- <th>OT Type</th> -->
 											<th>Description</th>
 											
 											<th class="text-right">Actions</th>
@@ -149,17 +149,17 @@
 									?>
 									<tbody>
 										<tr>
-											<td>1</td>
+											<td><?php echo htmlentities($row->id)?></td>
 											<td>
 												<h2 class="table-avatar blue-link">
 													<!-- <a href="profile.php" class="avatar"><img alt="" src="employees/<?php //echo htmlentities($row->Picture); ?>"></a> -->
-													<a href="profile.php"><?php echo htmlentities($row->Employee) ;?></a>
+													<a href="profile.php"><?php echo htmlentities($row->employee) ;?></a>
 												</h2>
 											</td>
-											<td><?php echo htmlentities($row->OverTime_Date); ?></td>
-											<td class="text-center"><?php echo htmlentities($row->Hours); ?></td>
-											<td><?php echo htmlentities($row->Type); ?></td>
-											<td><?php echo htmlentities($row->Description); ?></td>
+											<td><?php echo htmlentities($row->overtime_date); ?></td>
+											<td class="text-center"><?php echo htmlentities($row->hours); ?></td>
+											<!-- <td><?php echo htmlentities($row->type); ?></td> -->
+											<td><?php echo htmlentities($row->description); ?></td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>

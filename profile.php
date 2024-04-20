@@ -1,11 +1,46 @@
-﻿<?php 
-	session_start();
-	error_reporting(0);
-	include('includes/config.php');
-	if(strlen($_SESSION['userlogin'])==0){
-		header('location:login.php');
-	}
- ?>
+﻿<?php
+    session_start();
+    error_reporting(0);
+    include_once('includes/config.php');
+    include_once("includes/functions.php");
+
+    // Check if user is logged in
+    if(strlen($_SESSION['userlogin']) == 0){
+        header('location:login.php');
+    }
+
+    // Check if employee name is provided in the URL
+    if(isset($_GET['name'])) {
+        // Get employee name from URL and sanitize it
+        $employee_name = trim($_GET['name']);
+        $employee_name = urldecode($employee_name);
+
+        // Fetch employee information from the database
+        $sql = "SELECT * FROM employees WHERE CONCAT(firstname, ' ', lastname) = :employee_name";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':employee_name', $employee_name, PDO::PARAM_STR);
+        $query->execute();
+        $employee = $query->fetch(PDO::FETCH_ASSOC);
+
+        // Check if employee exists
+        if($employee) {
+            $firstname = $employee['firstname'];
+            $lastname = $employee['lastname'];
+            $designation = $employee['designation'];
+            $picture = $employee['picture'];
+        } else {
+            // If employee does not exist, redirect to an error page or display a message
+            // For now, let's redirect back to employees.php
+            header('location:employees.php');
+            exit;
+        }
+    } else {
+        // If employee name is not provided, redirect to an error page or display a message
+        // For now, let's redirect back to employees.php
+        header('location:employees.php');
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,6 +83,7 @@
 		<![endif]-->
     </head>
     <body>
+
 		<!-- Main Wrapper -->
         <div class="main-wrapper">
 		
@@ -80,74 +116,75 @@
 					<!-- /Page Header -->
 					
 					<div class="card mb-0">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="profile-view">
-										<div class="profile-img-wrap">
-											<div class="profile-img">
-												<a href="#"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
-											</div>
-										</div>
-										<div class="profile-basic">
-											<div class="row">
-												<div class="col-md-5">
-													<div class="profile-info-left">
-														<h3 class="user-name m-t-0 mb-0">John Doe</h3>
-														<h6 class="text-muted">UI/UX Design Team</h6>
-														<small class="text-muted">Web Designer</small>
-														<div class="staff-id">Employee ID : FT-0001</div>
-														<div class="small doj text-muted">Date of Join : 1st Jan 2013</div>
-														<div class="staff-msg"><a class="btn btn-custom" href="chat.php">Send Message</a></div>
-													</div>
-												</div>
-												<div class="col-md-7">
-													<ul class="personal-info">
-														<li>
-															<div class="title">Phone:</div>
-															<div class="text"><a href="">9876543210</a></div>
-														</li>
-														<li>
-															<div class="title">Email:</div>
-															<div class="text"><a href="">johndoe@example.com</a></div>
-														</li>
-														<li>
-															<div class="title">Birthday:</div>
-															<div class="text">24th July</div>
-														</li>
-														<li>
-															<div class="title">Address:</div>
-															<div class="text">1861 Bayonne Ave, Manchester Township, NJ, 08759</div>
-														</li>
-														<li>
-															<div class="title">Gender:</div>
-															<div class="text">Male</div>
-														</li>
-														<li>
-															<div class="title">Reports to:</div>
-															<div class="text">
-															   <div class="avatar-box">
-																  <div class="avatar avatar-xs">
-																	 <img src="assets/img/profiles/avatar-16.jpg" alt="">
-																  </div>
-															   </div>
-															   <a href="profile.php">
-																	Jeffery Lalor
-																</a>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="pro-edit"><a data-target="#profile_info" data-toggle="modal" class="edit-icon" href="#"><i class="fa fa-pencil"></i></a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="card tab-box">
+					<div class="card mb-0">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="profile-view">
+                    <div class="profile-img-wrap">
+                        <div class="profile-img">
+                            <a href="#"><img alt="" src="employees/<?php echo $employee['picture']; ?>"></a>
+                        </div>
+                    </div>
+                    <div class="profile-basic">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="profile-info-left">
+                                    <h3 class="user-name m-t-0 mb-0"><?php echo $employee['firstname'] . ' ' . $employee['lastname']; ?></h3>
+                                    <h6 class="text-muted"><?php echo $employee['designation']; ?></h6>
+                                    <small class="text-muted"><?php echo $employee['role']; ?></small>
+                                    <div class="staff-id">Employee ID : <?php echo $employee['employee_id']; ?></div>
+                                    <div class="small doj text-muted">Date of Join : <?php echo $employee['date_of_join']; ?></div>
+                                    <div class="staff-msg"><a class="btn btn-custom" href="chat.php">Send Message</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="personal-info">
+                                    <li>
+                                        <div class="title">Phone:</div>
+                                        <div class="text"><a href="tel:<?php echo $employee['phone']; ?>"><?php echo $employee['phone']; ?></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Email:</div>
+                                        <div class="text"><a href="mailto:<?php echo $employee['email']; ?>"><?php echo $employee['email']; ?></a></div>
+                                    </li>
+                                    <!-- <li>
+                                        <div class="title">Birthday:</div>
+                                        <div class="text"><?php echo $employee['birthday']; ?></div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Address:</div>
+                                        <div class="text"><?php echo $employee['address']; ?></div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Gender:</div>
+                                        <div class="text"><?php echo $employee['gender']; ?></div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Reports to:</div>
+                                        <div class="text">
+                                            <div class="avatar-box">
+                                                <div class="avatar avatar-xs">
+                                                    <img src="assets/img/profiles/avatar-16.jpg" alt="Reports to avatar">
+                                                </div>
+                                            </div>
+                                            <a href="profile.php">
+                                                <?php echo $employee['reports_to']; ?>
+                                            </a>
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro-edit"><a data-target="#profile_info" data-toggle="modal" class="edit-icon" href="#"><i class="fa fa-pencil"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+					<!-- <div class="card tab-box">
 						<div class="row user-tabs">
 							<div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
 								<ul class="nav nav-tabs nav-tabs-bottom">
@@ -157,7 +194,7 @@
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					
 					<div class="tab-content">
 					

@@ -94,7 +94,6 @@
 											<th>#</th>
 											<th>Title </th>
 											<th>Holiday Date</th>
-											<th>Day</th>
 											<th class="text-right">Action</th>
 										</tr>
 									</thead>
@@ -112,9 +111,9 @@
 									<tbody>
 										<tr class="holiday-upcoming">
 											<td><?php echo $cnt; ?></td>
-											<td><?php echo htmlentities($row->Holiday_Name);?></td>
-											<td><?php echo htmlentities($row->Holiday_Date);?></td>
-											<td><?php echo htmlentities($row->Holiday_Date); ?></td>
+											<td><?php echo htmlentities($row->holiday_name);?></td>
+											<td><?php echo htmlentities($row->holiday_date);?></td>
+											
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>

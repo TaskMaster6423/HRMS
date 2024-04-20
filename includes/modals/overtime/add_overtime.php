@@ -1,3 +1,30 @@
+<script>
+    function validateForm() {
+        var employee = document.forms["overtimeForm"]["employee"].value;
+        var date = document.forms["overtimeForm"]["ov_date"].value;
+        var hours = document.forms["overtimeForm"]["ov_hours"].value;
+        var description = document.forms["overtimeForm"]["description"].value;
+
+        if (employee === "") {
+            alert("Please select an employee.");
+            return false;
+        }
+        if (date === "") {
+            alert("Please select a date for overtime.");
+            return false;
+        }
+        if (isNumber(hours)) {
+            alert("Please enter a valid number of hours for overtime.");
+            return false;
+        }
+        if (description === "") {
+            alert("Please enter a description.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
 <div id="add_overtime" class="modal custom-modal fade" role="dialog">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
@@ -21,8 +48,8 @@
 											foreach($result2 as $row)
 											{          
 												?>  
-											<option value="<?php echo htmlentities($row->FirstName).' '.htmlentities($row->LastName); ?>">
-											<?php echo htmlentities($row->FirstName)." ".htmlentities($row->LastName); ?></option>
+											<option value="<?php echo htmlentities($row->firstname).' '.htmlentities($row->lastname); ?>">
+											<?php echo htmlentities($row->firstname)." ".htmlentities($row->lastname); ?></option>
 											<?php } ?> 
 										</select>
 									</div>
@@ -30,10 +57,10 @@
 										<label>Overtime Date <span class="text-danger">*</span></label>
 										<input name="ov_date" required class="form-control " type="date">
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label>Overtime Type <span class="text-danger">*</span></label>
 										<input name="ov_type" required class="form-control " type="text">
-									</div>
+									</div> -->
 
 									<div class="form-group">
 										<label>Overtime Hours <span class="text-danger">*</span></label>

@@ -9,7 +9,7 @@
 								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="index.php">Admin Dashboard</a></li>
-									<li><a href="employee-dashboard.php">Employee Dashboard</a></li>
+									<!-- <li><a href="employee-dashboard.php">Employee Dashboard</a></li> -->
 								</ul>
 							</li>
 							
@@ -22,8 +22,8 @@
 									<li><a href="employees.php">All Employees</a></li>
 									<li><a href="holidays.php">Holidays</a></li>
 									<li><a href="leaves-employee.php">Employee Leave</a></li>
-									<li><a href="departments.php">Departments</a></li>
-									<li><a href="designations.php">Designations</a></li>
+									<!-- <li><a href="departments.php">Departments</a></li> -->
+									<!-- <li><a href="designations.php">Designations</a></li> -->
 									<li><a href="timesheet.php">Timesheet</a></li>
 									<li><a href="overtime.php">Overtime</a></li>
 								</ul>
@@ -44,21 +44,21 @@
 								<a href="#"><i class="la la-money"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="salary.php"> Employee Salary </a></li>
-									<li><a href="salary-view.php"> Payslip </a></li>
-									<li><a href="payroll-items.php"> Payroll Items </a></li>
+									<!-- <li><a href="salary-view.php"> Payslip </a></li> -->
+									<!-- <li><a href="payroll-items.php"> Payroll Items </a></li> -->
 								</ul>
 							</li>
 							
 							
 							
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-crosshairs"></i> <span> Goals </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="goal-tracking.php"> Goal List </a></li>
 									<li><a href="goal-type.php"> Goal Type </a></li>
 								</ul>
-                            </li>
-							<li><a href="promotion.php"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
+                            </li> -->
+							<!-- <li><a href="promotion.php"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li> -->
 							<li><a href="resignation.php"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
 							<li><a href="termination.php"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
 							<li class="menu-title"> 
@@ -71,21 +71,21 @@
 							
 						
 							<li> 
-								<a href="users.php"><i class="la la-user-plus"></i> <span>Users</span></a>
+								<!-- <a href="users.php"><i class="la la-user-plus"></i> <span>Users</span></a> -->
 							</li>
 							
 							<li class="menu-title"> 
 								<span>Pages</span>
 							</li>
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="profile.php"> Employee Profile </a></li>
 									<li><a href="client-profile.php"> Client Profile </a></li>
 								</ul>
-							</li>
+							</li> -->
 							<li> 
-								<a href="settings.php"><i class="la la-cogs"></i> <span>Settings</span></a>
+								<!-- <a href="settings.php"><i class="la la-cogs"></i> <span>Settings</span></a> -->
 							</li>
 							<li> 
 								<a href="logout.php"><i class="la la-power-off"></i> <span>Logout</span></a>

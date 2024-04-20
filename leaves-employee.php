@@ -89,10 +89,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- /Page Header -->
-					
-					
-					
+					<!-- /Page Header -->	
 					<div class="row">
 						<div class="col-md-12">
 							<div class="table-responsive">
@@ -120,11 +117,11 @@
 									?>
 									<tbody>
 										<tr>
-											<td><?php echo htmlentities($row->Employee);?></td>
-											<td><?php echo htmlentities($row->Starting_At);?></td>
-											<td><?php echo htmlentities($row->Ending_On);?></td>
-											<td><?php echo htmlentities($row->Days);?></td>
-											<td><?php echo htmlentities($row->Reason);?></td>
+											<td><?php echo htmlentities($row->employee);?></td>
+											<td><?php echo htmlentities($row->starting_at);?></td>
+											<td><?php echo htmlentities($row->ending_on);?></td>
+											<td><?php echo htmlentities($row->days_count);?></td>
+											<td><?php echo htmlentities($row->reason);?></td>
 											
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
