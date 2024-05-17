@@ -4,7 +4,7 @@ define('DB_HOST', 'localhost');
 define('DB_PORT', '5432'); // Change this if your PostgreSQL is using a different port.
 define('DB_USER', 'postgres'); // Change this to your PostgreSQL username.
 define('DB_PASS', 'Anurag'); // Change this to your PostgreSQL password.
-define('DB_NAME', 'smarthr');
+define('DB_NAME', 'hrms'); // Change if you are using a differen database 
 
 // Establish database connection.
 try {

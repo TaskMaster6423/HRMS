@@ -1,52 +1,56 @@
 <?php
-session_start();
-error_reporting(0);
-include_once("includes/config.php");
+	session_start();
+	error_reporting(0);
+	include_once("includes/config.php");
+	$wrongusername = ''; // Initialize variable
+	$wrongpassword = ''; // Initialize variable
 
-// Check if user is already logged in
-if ($_SESSION['userlogin']) {
-    header('location:index.php');
-    exit();
-}
+    
 
-if (isset($_POST['login'])) {
-    $username = htmlspecialchars($_POST['username']);
-    $password = htmlspecialchars($_POST['password']);
-
-    // Retrieve user from database
-    $sql = "SELECT username, password FROM users WHERE username = :username";
-    $query = $dbh->prepare($sql);
-    $query->bindParam(':username', $username, PDO::PARAM_STR);
-    $query->execute();
-    $user = $query->fetch(PDO::FETCH_ASSOC);
-
-    if ($user) {
-        // Verify password
-        if ($password === $user['password']) { // Compare with plain text password
-            $_SESSION['userlogin'] = $username;
-            header('location:index.php');
-            exit();
-        } else {
-            // Wrong password
-            $wrongpassword = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Oh Snapp!😕</strong> Alert <b class="alert-link">Password: </b>You entered wrong password.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>';
-        }
-    } else {
-        // Username not found
-        $wrongusername = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Oh Snapp!🙃</strong> Alert <b class="alert-link">UserName: </b> You entered a wrong UserName.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>';
-    }
-}
+	if($_SESSION['userlogin'] > 0){
+		header('location:index.php');
+	} elseif(isset($_POST['login'])) {
+		$_SESSION['userlogin'] = $_POST['username'];
+		$username = htmlspecialchars($_POST['username']);
+		$password = htmlspecialchars($_POST['password']);
+		$sql = "SELECT username, password_hash, designation FROM users WHERE username=:username";
+		$query = $dbh->prepare($sql);
+		$query->bindParam(':username', $username, PDO::PARAM_STR);
+		$query->execute();
+		$results = $query->fetchAll(PDO::FETCH_OBJ);
+		if($query->rowCount() > 0){
+			foreach ($results as $row) {
+				$hashpass = $row->password_hash;
+				$designation = $row->designation;
+			}
+			if(password_verify($password, $hashpass)) {
+				$_SESSION['userlogin'] = $_POST['username'];
+				if($designation == 'Admin') {
+					header('location:admin_dashboard.php'); // Redirect to admin dashboard
+				} else {
+					header('location:user_dashboard.php'); // Redirect to user dashboard
+				}
+				exit();
+			} else {
+				$wrongpassword = '
+					<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<strong>Oh Snap!😕</strong> Alert <b class="alert-link">Password: </b>You entered wrong password.
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>';
+			}
+		} else {
+			$wrongusername = '
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<strong>Oh Snap!🙃</strong> Alert <b class="alert-link">UserName: </b> You entered a wrong UserName.
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>';
+		}
+	}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
