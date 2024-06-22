@@ -79,8 +79,8 @@
 								<div class="card-body">
 									<span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
 									<div class="dash-widget-info">
-										<h3>112</h3>
-										<span>Projects</span>
+										<h3>1123</h3>
+										<span>Projects Done</span>
 									</div>
 								</div>
 							</div>
